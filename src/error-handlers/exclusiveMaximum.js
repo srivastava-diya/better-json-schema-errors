@@ -19,7 +19,7 @@ const exclusiveMaximumErrorHandler = async (normalizedErrors, instance, localiza
       errors.push({
         message: localization.getExclusiveMaximumErrorMessage(exclusiveMaximum),
         instanceLocation: Instance.uri(instance),
-        schemaLocation: schemaLocation
+        schemaLocations: [schemaLocation]
       });
     }
   }

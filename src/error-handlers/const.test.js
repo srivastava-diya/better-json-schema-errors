@@ -26,7 +26,7 @@ describe("const error handler", async () => {
       {
         message: localization.getConstErrorMessage(42),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/const`
+        schemaLocations: [`${schemaUri}#/const`]
       }
     ]);
   });

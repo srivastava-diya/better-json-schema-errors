@@ -28,7 +28,7 @@ describe("Boolean schema error handler", async () => {
       {
         message: localization.getBooleanSchemaErrorMessage(),
         instanceLocation: "#/foo",
-        schemaLocation: `${schemaUri}#/properties/foo`
+        schemaLocations: [`${schemaUri}#/properties/foo`]
       }
     ]);
   });

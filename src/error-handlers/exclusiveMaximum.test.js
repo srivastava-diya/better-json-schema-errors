@@ -26,7 +26,7 @@ describe("exclusiveMaximum error handler", async () => {
       {
         message: localization.getExclusiveMaximumErrorMessage(3),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/exclusiveMaximum`
+        schemaLocations: [`${schemaUri}#/exclusiveMaximum`]
       }
     ]);
   });

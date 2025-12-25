@@ -31,7 +31,7 @@ const dependentRequiredErrorHandler = async (normalizedErrors, instance, localiz
       errors.push({
         message: localization.getRequiredErrorMessage([...required]),
         instanceLocation: Instance.uri(instance),
-        schemaLocation: schemaLocation
+        schemaLocations: [schemaLocation]
       });
     }
   }

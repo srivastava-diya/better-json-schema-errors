@@ -37,7 +37,7 @@ export type JsonSchemaErrors = ErrorObject[];
 export type ErrorObject = {
   message: string;
   instanceLocation: string;
-  schemaLocation: string | string[];
+  schemaLocations: string[];
 };
 
 export type KeywordHandler<KeywordValue = unknown, Context extends EvaluationContext = EvaluationContext> = {

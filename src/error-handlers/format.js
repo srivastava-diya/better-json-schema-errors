@@ -29,7 +29,7 @@ const formatErrorHandler = async (normalizedErrors, instance, localization) => {
         errors.push({
           message: localization.getFormatErrorMessage(format),
           instanceLocation: Instance.uri(instance),
-          schemaLocation: schemaLocation
+          schemaLocations: [schemaLocation]
         });
       }
     }

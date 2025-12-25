@@ -21,7 +21,7 @@ const typeErrorHandler = async (normalizedErrors, instance, localization) => {
       errors.push({
         message: localization.getTypeErrorMessage(expectedTypes),
         instanceLocation: Instance.uri(instance),
-        schemaLocation: schemaLocation
+        schemaLocations: [schemaLocation]
       });
     }
   }

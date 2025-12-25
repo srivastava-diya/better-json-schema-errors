@@ -29,7 +29,7 @@ describe("dependentRequired error handler", async () => {
       {
         message: localization.getRequiredErrorMessage(["baz"]),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/dependentRequired`
+        schemaLocations: [`${schemaUri}#/dependentRequired`]
       }
     ]);
   });

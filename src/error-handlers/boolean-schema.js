@@ -15,7 +15,7 @@ const booleanSchemaErrorHandler = async (normalizedErrors, instance, localizatio
       errors.push({
         message: localization.getBooleanSchemaErrorMessage(),
         instanceLocation: Instance.uri(instance),
-        schemaLocation: schemaLocation
+        schemaLocations: [schemaLocation]
       });
     }
   }

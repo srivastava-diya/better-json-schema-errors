@@ -19,7 +19,7 @@ const enumErrorHandler = async (normalizedErrors, instance, localization) => {
       errors.push({
         message: localization.getEnumErrorMessage(expected),
         instanceLocation: Instance.uri(instance),
-        schemaLocation: schemaLocation
+        schemaLocations: [schemaLocation]
       });
     }
   }

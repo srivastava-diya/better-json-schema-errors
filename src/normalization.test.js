@@ -57,7 +57,7 @@ describe("Normalization", async () => {
       {
         message: localization.getTypeErrorMessage(["number"]),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/type`
+        schemaLocations: [`${schemaUri}#/type`]
       }
     ]);
   });
@@ -86,7 +86,7 @@ describe("Normalization", async () => {
       {
         message: localization.getTypeErrorMessage(["number"]),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/type`
+        schemaLocations: [`${schemaUri}#/type`]
       }
     ]);
   });
@@ -121,7 +121,7 @@ describe("Normalization", async () => {
       {
         message: localization.getTypeErrorMessage(["number"]),
         instanceLocation: "#/foo",
-        schemaLocation: `${schemaUri}#/$defs/number/type`
+        schemaLocations: [`${schemaUri}#/$defs/number/type`]
       }
     ]);
   });
@@ -194,7 +194,7 @@ describe("Normalization", async () => {
       {
         message: localization.getTypeErrorMessage(["number"]),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/type`
+        schemaLocations: [`${schemaUri}#/type`]
       }
     ]);
   });
@@ -230,7 +230,7 @@ describe("Normalization", async () => {
       {
         message: localization.getMinimumErrorMessage(3),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/minimum`
+        schemaLocations: [`${schemaUri}#/minimum`]
       }
     ]);
   });
@@ -291,7 +291,7 @@ describe("Normalization", async () => {
       {
         message: localization.getTypeErrorMessage(["number"]),
         instanceLocation: "#/foo",
-        schemaLocation: `${schemaUri}#/properties/foo/type`
+        schemaLocations: [`${schemaUri}#/properties/foo/type`]
       }
     ]);
   });
@@ -335,7 +335,7 @@ describe("Normalization", async () => {
       {
         message: localization.getTypeErrorMessage(["number"]),
         instanceLocation: "#/foo",
-        schemaLocation: `${schemaUri}#/properties/foo/type`
+        schemaLocations: [`${schemaUri}#/properties/foo/type`]
       }
     ]);
   });
@@ -367,7 +367,7 @@ describe("Normalization", async () => {
       {
         message: localization.getBooleanSchemaErrorMessage(),
         instanceLocation: "#/foo",
-        schemaLocation: `${schemaUri}#/properties/foo`
+        schemaLocations: [`${schemaUri}#/properties/foo`]
       }
     ]);
   });

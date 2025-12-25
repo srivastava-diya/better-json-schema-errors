@@ -26,7 +26,7 @@ describe("type error handler", async () => {
       {
         message: localization.getTypeErrorMessage(["number"]),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/type`
+        schemaLocations: [`${schemaUri}#/type`]
       }
     ]);
   });
@@ -45,7 +45,7 @@ describe("type error handler", async () => {
       {
         message: localization.getTypeErrorMessage(["number", "null"]),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/type`
+        schemaLocations: [`${schemaUri}#/type`]
       }
     ]);
   });

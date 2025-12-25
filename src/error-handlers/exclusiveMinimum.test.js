@@ -26,7 +26,7 @@ describe("exclusiveMinimum error handler", async () => {
       {
         message: localization.getExclusiveMinimumErrorMessage(3),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/exclusiveMinimum`
+        schemaLocations: [`${schemaUri}#/exclusiveMinimum`]
       }
     ]);
   });

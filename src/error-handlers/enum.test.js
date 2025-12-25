@@ -26,7 +26,7 @@ describe("enum error handler", async () => {
       {
         message: localization.getEnumErrorMessage(["foo", "bar"]),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/enum`
+        schemaLocations: [`${schemaUri}#/enum`]
       }
     ]);
   });

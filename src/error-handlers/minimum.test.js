@@ -27,7 +27,7 @@ describe("minimum error handler", async () => {
       {
         message: localization.getMinimumErrorMessage(3),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/minimum`
+        schemaLocations: [`${schemaUri}#/minimum`]
       }
     ]);
   });

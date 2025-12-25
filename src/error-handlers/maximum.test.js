@@ -26,7 +26,7 @@ describe("maximum error handler", async () => {
       {
         message: localization.getMaximumErrorMessage(3),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/maximum`
+        schemaLocations: [`${schemaUri}#/maximum`]
       }
     ]);
   });

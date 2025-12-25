@@ -26,7 +26,7 @@ const requiredErrorHandler = async (normalizedErrors, instance, localization) =>
       errors.push({
         message: localization.getRequiredErrorMessage(missingRequired),
         instanceLocation: Instance.uri(instance),
-        schemaLocation: [schemaLocation]
+        schemaLocations: [schemaLocation]
       });
     }
   }

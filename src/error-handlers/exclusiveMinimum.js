@@ -19,7 +19,7 @@ const exclusiveMinimumErrorHandler = async (normalizedErrors, instance, localiza
       errors.push({
         message: localization.getExclusiveMinimumErrorMessage(exclusiveMinimum),
         instanceLocation: Instance.uri(instance),
-        schemaLocation: schemaLocation
+        schemaLocations: [schemaLocation]
       });
     }
   }

@@ -33,7 +33,7 @@ describe("format error handler", async () => {
       {
         message: localization.getFormatErrorMessage("email"),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/format`
+        schemaLocations: [`${schemaUri}#/format`]
       }
     ]);
   });
@@ -52,7 +52,7 @@ describe("format error handler", async () => {
       {
         message: localization.getFormatErrorMessage("email"),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/format`
+        schemaLocations: [`${schemaUri}#/format`]
       }
     ]);
   });
@@ -71,7 +71,7 @@ describe("format error handler", async () => {
       {
         message: localization.getFormatErrorMessage("email"),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/format`
+        schemaLocations: [`${schemaUri}#/format`]
       }
     ]);
   });
@@ -90,7 +90,7 @@ describe("format error handler", async () => {
       {
         message: localization.getFormatErrorMessage("email"),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/format`
+        schemaLocations: [`${schemaUri}#/format`]
       }
     ]);
   });
@@ -109,7 +109,7 @@ describe("format error handler", async () => {
       {
         message: localization.getFormatErrorMessage("email"),
         instanceLocation: "#",
-        schemaLocation: `${schemaUri}#/format`
+        schemaLocations: [`${schemaUri}#/format`]
       }
     ]);
   });

@@ -19,7 +19,7 @@ const constErrorHandler = async (normalizedErrors, instance, localization) => {
       errors.push({
         message: localization.getConstErrorMessage(expected),
         instanceLocation: Instance.uri(instance),
-        schemaLocation: schemaLocation
+        schemaLocations: [schemaLocation]
       });
     }
   }

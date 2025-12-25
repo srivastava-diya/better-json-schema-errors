@@ -26,7 +26,7 @@ describe("dependentRequired error handler", async () => {
       {
         message: localization.getRequiredErrorMessage(["bar"]),
         instanceLocation: "#",
-        schemaLocation: [`${schemaUri}#/required`]
+        schemaLocations: [`${schemaUri}#/required`]
       }
     ]);
   });
