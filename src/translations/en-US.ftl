@@ -10,6 +10,7 @@ multipleOf-error = Expected a number that is a multiple of {$multipleOf}
 maxLength-error = Expected a string with at most {$maxLength} characters
 minLength-error = Expected a string with at least {$minLength} characters
 maxItems-error = Expected an array with at most {$maxItems} items
+minItems-error = Expected an array with at least {$minItems} items
 format-error = Expected a value matching the '{$format}' format
 required-error = Required {$count ->
   [one] property {$required} is
