@@ -102,6 +102,11 @@ export class Localization {
     return this.#formatMessage("minLength-error", { minLength });
   }
 
+  /** @type (maxItems: number) => string */
+  getMaxItemsErrorMessage(maxItems) {
+    return this.#formatMessage("maxItems-error", { maxItems });
+  }
+
   /** @type (format: string) => string */
   getFormatErrorMessage(format) {
     return this.#formatMessage("format-error", { format });
