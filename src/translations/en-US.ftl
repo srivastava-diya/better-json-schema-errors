@@ -6,6 +6,7 @@ exclusiveMaximum-error = Expected a number less than {$exclusiveMaximum}
 exclusiveMinimum-error = Expected a number greater than {$exclusiveMinimum}
 maximum-error = Expected a number less than {$maximum}
 minimum-error = Expected a number greater than {$minimum}
+multipleOf-error = Expected a number that is a multiple of {$multipleOf}
 maxLength-error = Expected a string with at most {$maxLength} characters
 minLength-error = Expected a string with at least {$minLength} characters
 format-error = Expected a value matching the '{$format}' format

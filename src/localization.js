@@ -87,6 +87,11 @@ export class Localization {
     return this.#formatMessage("minimum-error", { minimum });
   }
 
+  /** @type (multipleOf: number) => string */
+  getMultipleOfErrorMessage(multipleOf) {
+    return this.#formatMessage("multipleOf-error", { multipleOf });
+  }
+
   /** @type (maxLength: number) => string */
   getMaxLengthErrorMessage(maxLength) {
     return this.#formatMessage("maxLength-error", { maxLength });
