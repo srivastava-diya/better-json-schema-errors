@@ -15,6 +15,7 @@ import exclusiveMaximumNormalizationHandler from "./normalization-handlers/exclu
 import exclusiveMinimumNormalizationHandler from "./normalization-handlers/exclusiveMinimum.js";
 import formatNormalizationHandler from "./normalization-handlers/format.js";
 import ifNormalizationHandler from "./normalization-handlers/if.js";
+import itemsNormalizationHandler from "./normalization-handlers/items.js";
 import maximumNormalizationHandler from "./normalization-handlers/maximum.js";
 import maxItemsNormalizationHandler from "./normalization-handlers/maxItems.js";
 import maxLengthNormalizationHandler from "./normalization-handlers/maxLength.js";
@@ -82,6 +83,7 @@ setNormalizationHandler("https://json-schema.org/keyword/draft-07/format", forma
 setNormalizationHandler("https://json-schema.org/keyword/draft-06/format", formatNormalizationHandler);
 setNormalizationHandler("https://json-schema.org/keyword/draft-04/format", formatNormalizationHandler);
 setNormalizationHandler("https://json-schema.org/keyword/if", ifNormalizationHandler);
+setNormalizationHandler("https://json-schema.org/keyword/items", itemsNormalizationHandler);
 setNormalizationHandler("https://json-schema.org/keyword/exclusiveMaximum", exclusiveMaximumNormalizationHandler);
 setNormalizationHandler("https://json-schema.org/keyword/exclusiveMinimum", exclusiveMinimumNormalizationHandler);
 setNormalizationHandler("https://json-schema.org/keyword/maximum", maximumNormalizationHandler);
