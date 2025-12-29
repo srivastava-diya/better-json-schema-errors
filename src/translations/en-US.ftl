@@ -4,6 +4,7 @@ type-error = Expected a {$expectedTypes}
 const-error = Expected {$expected}
 enum-error = Expected {$expected}
 format-error = Expected a value matching the '{$format}' format
+unknown-error = Failed the '{$keyword}' keyword
 
 // Number keywords
 exclusiveMaximum-error = Expected a number less than {$exclusiveMaximum}

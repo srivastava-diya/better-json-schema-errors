@@ -2,6 +2,7 @@ import { compile, getKeyword, getSchema } from "@hyperjump/json-schema/experimen
 import * as Instance from "@hyperjump/json-schema/instance/experimental";
 import * as Schema from "@hyperjump/browser";
 import { pointerSegments } from "@hyperjump/json-pointer";
+import { toAbsoluteIri } from "@hyperjump/uri";
 import { Localization } from "./localization.js";
 
 /**
@@ -131,8 +132,8 @@ export const evaluateSchema = (schemaLocation, instance, context) => {
           mergeOutput(output, suboutput);
         }
       } else if (!isKeywordValid) {
-        output[instanceLocation][keywordUri] ??= {};
-        output[instanceLocation][keywordUri][keywordLocation] = keywordOutput ?? false;
+        output[instanceLocation][toAbsoluteIri(keywordUri)] ??= {};
+        output[instanceLocation][toAbsoluteIri(keywordUri)][keywordLocation] = keywordOutput ?? false;
       } else if (keyword.appliesTo?.(Instance.typeOf(instance)) !== false) {
         output[instanceLocation][keywordUri] ??= {};
         output[instanceLocation][keywordUri][keywordLocation] = isKeywordValid;

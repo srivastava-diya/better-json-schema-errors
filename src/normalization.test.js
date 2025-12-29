@@ -235,7 +235,7 @@ describe("Normalization", async () => {
     ]);
   });
 
-  test("output with an unhandled keyword", async () => {
+  test("output with an unknown keyword", async () => {
     registerSchema({
       $schema: "https://json-schema.org/draft/2020-12/schema",
       foo: 42
@@ -255,7 +255,13 @@ describe("Normalization", async () => {
     };
 
     const errors = await jsonSchemaErrors(output, schemaUri, instance);
-    expect(errors).to.eql([]);
+    expect(errors).to.eql([
+      {
+        message: localization.getUnknownErrorMessage("foo"),
+        instanceLocation: "#",
+        schemaLocations: [`${schemaUri}#/foo`]
+      }
+    ]);
   });
 
   test("output with nested nodes (DETAILED/VERBOSE formats)", async () => {

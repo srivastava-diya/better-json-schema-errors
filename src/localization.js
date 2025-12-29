@@ -159,4 +159,9 @@ export class Localization {
   getNotErrorMessage() {
     return this.#formatMessage("not-error", {});
   }
+
+  /** @type (keyword: string) => string */
+  getUnknownErrorMessage(keyword) {
+    return this.#formatMessage("unknown-error", { keyword });
+  }
 }

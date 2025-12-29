@@ -64,6 +64,7 @@ import patternErrorHandler from "./error-handlers/pattern.js";
 import requiredErrorHandler from "./error-handlers/required.js";
 import typeErrorHandler from "./error-handlers/type.js";
 import uniqueItemsErrorHandler from "./error-handlers/uniqueItems.js";
+import unknownErrorHandler from "./error-handlers/unknown.js";
 
 setNormalizationHandler("https://json-schema.org/keyword/additionalProperties", additionalPropertiesNormalizationHandler);
 setNormalizationHandler("https://json-schema.org/keyword/allOf", allOfNormalizationHandler);
@@ -133,5 +134,6 @@ addErrorHandler(patternErrorHandler);
 addErrorHandler(requiredErrorHandler);
 addErrorHandler(typeErrorHandler);
 addErrorHandler(uniqueItemsErrorHandler);
+addErrorHandler(unknownErrorHandler);
 
 export { addErrorHandler, jsonSchemaErrors, setNormalizationHandler } from "./json-schema-errors.js";
