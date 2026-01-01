@@ -14,7 +14,7 @@ import { Localization } from "./localization.js";
 
 /** @type API.jsonSchemaErrors */
 export async function jsonSchemaErrors(errorOutput, schemaUri, instance, options = {}) {
-  const normalizedErrors = await normalizedErrorOuput(instance, errorOutput, schemaUri);
+  const normalizedErrors = await normalizedOutput(instance, errorOutput, schemaUri);
   const rootInstance = Instance.fromJs(instance);
   const localization = await Localization.forLocale(options.language ?? "en-US");
   return await getErrors(normalizedErrors, rootInstance, localization);
@@ -29,7 +29,7 @@ export const setNormalizationHandler = (uri, handler) => {
 };
 
 /** @type (instance: API.Json, errorOutput: API.OutputUnit, subjectUri: string) => Promise<API.NormalizedOutput> */
-export async function normalizedErrorOuput(instance, errorOutput, subjectUri) {
+async function normalizedOutput(instance, errorOutput, subjectUri) {
   const schema = await getSchema(subjectUri);
   const errorIndex = await constructErrorIndex(errorOutput, schema);
   const { schemaUri, ast } = await compile(schema);
@@ -38,7 +38,7 @@ export async function normalizedErrorOuput(instance, errorOutput, subjectUri) {
 }
 
 /** @type (outputUnit: API.OutputUnit, schema: Browser<SchemaDocument>, errorIndex?: API.ErrorIndex) => Promise<API.ErrorIndex> */
-export const constructErrorIndex = async (outputUnit, schema, errorIndex = {}) => {
+const constructErrorIndex = async (outputUnit, schema, errorIndex = {}) => {
   if (outputUnit.valid) {
     return errorIndex;
   }
@@ -73,7 +73,7 @@ export const constructErrorIndex = async (outputUnit, schema, errorIndex = {}) =
  * @param {string} keywordLocation
  * @returns {Promise<string>}
  */
-export async function toAbsoluteKeywordLocation(schema, keywordLocation) {
+async function toAbsoluteKeywordLocation(schema, keywordLocation) {
   for (const segment of pointerSegments(keywordLocation)) {
     schema = await Schema.step(segment, schema);
   }
@@ -168,6 +168,14 @@ const mergeOutput = (a, b) => {
   }
 };
 
+/** @type API.ErrorHandler[] */
+const errorHandlers = [];
+
+/** @type API.addErrorHandler */
+export const addErrorHandler = (errorHandler) => {
+  errorHandlers.push(errorHandler);
+};
+
 /** @type (normalizedErrors: API.NormalizedOutput, rootInstance: JsonNode, language: Localization) => Promise<API.ErrorObject[]> */
 export const getErrors = async (normalizedErrors, rootInstance, localization) => {
   /** @type API.ErrorObject[] */
@@ -182,12 +190,4 @@ export const getErrors = async (normalizedErrors, rootInstance, localization) =>
   }
 
   return errors;
-};
-
-/** @type API.ErrorHandler[] */
-export const errorHandlers = [];
-
-/** @type API.addErrorHandler */
-export const addErrorHandler = (errorHandler) => {
-  errorHandlers.push(errorHandler);
 };

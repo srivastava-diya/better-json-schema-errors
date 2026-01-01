@@ -1,49 +1,49 @@
 // Any type keywords
-boolean-schema-error = A value is not allowed here
-type-error = Expected a {$expectedTypes}
-const-error = Expected {$expected}
-enum-error = Expected {$expected}
-format-error = Expected a value matching the '{$format}' format
-unknown-error = Failed the '{$keyword}' keyword
+boolean-schema-message = A value is not allowed here
+type-message = Expected a {$expectedTypes}
+const-message = Expected {$expected}
+enum-message = Expected {$expected}
+format-message = Expected a value matching the '{$format}' format
+unknown-message = Failed the '{$keyword}' keyword
 
 // Number keywords
-exclusiveMaximum-error = Expected a number less than {$exclusiveMaximum}
-exclusiveMinimum-error = Expected a number greater than {$exclusiveMinimum}
-maximum-error = Expected a number less than {$maximum}
-minimum-error = Expected a number greater than {$minimum}
-multipleOf-error = Expected a number that is a multiple of {$multipleOf}
+exclusiveMaximum-message = Expected a number less than {$exclusiveMaximum}
+exclusiveMinimum-message = Expected a number greater than {$exclusiveMinimum}
+maximum-message = Expected a number less than {$maximum}
+minimum-message = Expected a number greater than {$minimum}
+multipleOf-message = Expected a number that is a multiple of {$multipleOf}
 
 // String keywords
-maxLength-error = Expected a string with at most {$maxLength} characters
-minLength-error = Expected a string with at least {$minLength} characters
-pattern-error = Expected a string matching the regular expression /{$pattern}/
+maxLength-message = Expected a string with at most {$maxLength} characters
+minLength-message = Expected a string with at least {$minLength} characters
+pattern-message = Expected a string matching the regular expression /{$pattern}/
 
 // Array keywords
-maxItems-error = Expected an array with at most {$maxItems} items
-minItems-error = Expected an array with at least {$minItems} items
-contains-error = Expected an array that contains {$minContains ->
+maxItems-message = Expected an array with at most {$maxItems} items
+minItems-message = Expected an array with at least {$minItems} items
+contains-message = Expected an array that contains {$minContains ->
   [1] at least one item that passes
  *[other] at least {$minContains} items that pass
 } the 'contains' schema
-contains-range-error = Expected an array that contains between {$minContains} and {$maxContains} items that pass the 'contains' schema
-contains-exact-error = Expected an array that contains {$minContains ->
+contains-range-message = Expected an array that contains between {$minContains} and {$maxContains} items that pass the 'contains' schema
+contains-exact-message = Expected an array that contains {$minContains ->
   [1] one item that passes
  *[other] {$minContains} items that pass
 } the 'contains' schema
-uniqueItems-error = Duplicated item
+uniqueItems-message = Duplicated item
 
 // Object keywords
-maxProperties-error = Expected an object with at most {$maxProperties} properties
-minProperties-error = Expected an object with at least {$minProperties} properties
-required-error = Required {$count ->
+maxProperties-message = Expected an object with at most {$maxProperties} properties
+minProperties-message = Expected an object with at least {$minProperties} properties
+required-message = Required {$count ->
   [one] property {$required} is
  *[other] properties {$required} are
 } missing
 
 // Applicators
-anyOf-error = Expected none of the alternatives match
-oneOf-error = {$matchCount ->
+anyOf-message = Expected none of the alternatives match
+oneOf-message = {$matchCount ->
   [0] None
   *[other] More than one
 } of the alternatives match
-not-error = Expected a value that doesn't match the 'not' schema
+not-message = Expected a value that doesn't match the 'not' schema
