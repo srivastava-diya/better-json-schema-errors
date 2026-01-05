@@ -3,10 +3,10 @@ import * as Instance from "@hyperjump/json-schema/instance/experimental";
 import * as Pact from "@hyperjump/pact";
 
 /**
- * @import { KeywordHandler, NormalizedOutput } from "../index.d.ts"
+ * @import { NormalizationHandler, NormalizedOutput } from "../index.d.ts"
  */
 
-/** @type KeywordHandler<[number, string]> */
+/** @type NormalizationHandler<[number, string]> */
 const itemsNormalizationHandler = {
   evaluate([numberOfPrefixItems, items], instance, context) {
     /** @type NormalizedOutput[] */

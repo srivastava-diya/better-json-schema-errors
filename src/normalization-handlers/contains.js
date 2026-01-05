@@ -2,7 +2,7 @@ import * as Instance from "@hyperjump/json-schema/instance/experimental";
 import { evaluateSchema } from "../json-schema-errors.js";
 
 /**
- * @import { KeywordHandler, NormalizedOutput } from "../index.d.ts"
+ * @import { NormalizationHandler, NormalizedOutput } from "../index.d.ts"
  */
 
 /**
@@ -13,7 +13,7 @@ import { evaluateSchema } from "../json-schema-errors.js";
  * }} ContainsAst
  */
 
-/** @type KeywordHandler<ContainsAst> */
+/** @type NormalizationHandler<ContainsAst> */
 const containsNormalizationHandler = {
   evaluate({ contains }, instance, context) {
     /** @type NormalizedOutput[] */

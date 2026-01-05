@@ -1,10 +1,10 @@
 import { evaluateSchema } from "../json-schema-errors.js";
 
 /**
- * @import { KeywordHandler, NormalizedOutput } from "../index.d.ts"
+ * @import { NormalizationHandler, NormalizedOutput } from "../index.d.ts"
  */
 
-/** @type KeywordHandler<string[]> */
+/** @type NormalizationHandler<string[]> */
 const oneOfNormalizationHandler = {
   evaluate(oneOf, instance, context) {
     /** @type NormalizedOutput[] */

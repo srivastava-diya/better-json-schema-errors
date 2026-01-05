@@ -1,8 +1,8 @@
 /**
- * @import { KeywordHandler } from "../index.d.ts"
+ * @import { NormalizationHandler } from "../index.d.ts"
  */
 
-/** @type KeywordHandler */
+/** @type NormalizationHandler */
 const minPropertiesNormalizationHandler = {
   evaluate() {
   }

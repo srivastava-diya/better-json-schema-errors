@@ -20,7 +20,7 @@ export async function jsonSchemaErrors(errorOutput, schemaUri, instance, options
   return await getErrors(normalizedErrors, rootInstance, localization);
 };
 
-/** @type Record<string, API.KeywordHandler> */
+/** @type Record<string, API.NormalizationHandler> */
 const normalizationHandlers = {};
 
 /** @type API.setNormalizationHandler */

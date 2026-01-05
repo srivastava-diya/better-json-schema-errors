@@ -9,7 +9,7 @@ export const jsonSchemaErrors: (
   options?: Options
 ) => Promise<JsonSchemaErrors>;
 
-export const setNormalizationHandler: (uri: string, handler: KeywordHandler) => void;
+export const setNormalizationHandler: (uri: string, handler: NormalizationHandler) => void;
 
 export type OutputFormat = OutputUnit & {
   valid: boolean;
@@ -41,7 +41,7 @@ export type ErrorObject = {
   schemaLocations: string[];
 };
 
-export type KeywordHandler<KeywordValue = unknown, Context extends EvaluationContext = EvaluationContext> = {
+export type NormalizationHandler<KeywordValue = unknown, Context extends EvaluationContext = EvaluationContext> = {
   evaluate(value: KeywordValue, instance: JsonNode, context: Context): NormalizedOutput[] | void;
   simpleApplicator?: true;
 };

@@ -3,10 +3,10 @@ import * as Instance from "@hyperjump/json-schema/instance/experimental";
 import * as JsonPointer from "@hyperjump/json-pointer";
 
 /**
- * @import { KeywordHandler, NormalizedOutput } from "../index.d.ts"
+ * @import { NormalizationHandler, NormalizedOutput } from "../index.d.ts"
  */
 
-/** @type KeywordHandler<Record<string, string>> */
+/** @type NormalizationHandler<Record<string, string>> */
 const propertiesNormalizationHandler = {
   evaluate(properties, instance, context) {
     /** @type NormalizedOutput[] */

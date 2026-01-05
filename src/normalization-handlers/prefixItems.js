@@ -2,10 +2,10 @@ import { evaluateSchema } from "../json-schema-errors.js";
 import * as Instance from "@hyperjump/json-schema/instance/experimental";
 
 /**
- * @import { KeywordHandler, NormalizedOutput } from "../index.d.ts"
+ * @import { NormalizationHandler, NormalizedOutput } from "../index.d.ts"
  */
 
-/** @type KeywordHandler<string[]> */
+/** @type NormalizationHandler<string[]> */
 const prefixItemsNormalizationHandler = {
   evaluate(prefixItems, instance, context) {
     /** @type NormalizedOutput[] */

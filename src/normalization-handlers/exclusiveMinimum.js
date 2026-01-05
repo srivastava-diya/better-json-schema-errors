@@ -1,11 +1,11 @@
 /**
- * @import { KeywordHandler } from "../index.d.ts"
+ * @import { NormalizationHandler } from "../index.d.ts"
  */
 
-/** @type KeywordHandler */
-const exclusiveMinimumKeywordHandler = {
+/** @type NormalizationHandler */
+const exclusiveMinimumNormalizationHandler = {
   evaluate() {
   }
 };
 
-export default exclusiveMinimumKeywordHandler;
+export default exclusiveMinimumNormalizationHandler;

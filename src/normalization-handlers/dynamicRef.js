@@ -1,7 +1,7 @@
 import { evaluateSchema } from "../json-schema-errors.js";
 
 /**
- * @import { EvaluationContext, KeywordHandler } from "../index.d.ts"
+ * @import { EvaluationContext, NormalizationHandler } from "../index.d.ts"
  */
 
 /**
@@ -10,7 +10,7 @@ import { evaluateSchema } from "../json-schema-errors.js";
  * } & EvaluationContext} DynamicContext
  */
 
-/** @type KeywordHandler<string, DynamicContext> */
+/** @type NormalizationHandler<string, DynamicContext> */
 const dynamicRefNormalizationHandler = {
   evaluate([id, fragment, ref], instance, context) {
     if (fragment in context.ast.metaData[id].dynamicAnchors) {
