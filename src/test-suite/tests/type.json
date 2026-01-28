@@ -41,9 +41,9 @@
       "description": "collapsed type errors",
       "schema": {
         "allOf": [
-          {"type": ["string","boolean","number"]},
-          {"type": ["string","number"]},
-          {"type": "string"}
+          { "type": ["string", "boolean", "number"] },
+          { "type": ["string", "number"] },
+          { "type": "string" }
         ]
       },
       "instance": null,
@@ -51,10 +51,27 @@
         {
           "messageId": "type-message",
           "messageParams": {
-            "expectedTypes": "string"
+            "expectedTypes": { "or": ["string"] }
           },
           "instanceLocation": "#",
           "schemaLocations": ["#/allOf/0/type", "#/allOf/1/type", "#/allOf/2/type"]
+        }
+      ]
+    },
+    {
+      "description": "no types allowed",
+      "schema": {
+        "allOf": [
+          { "type": "string" },
+          { "type": "number" }
+        ]
+      },
+      "instance": null,
+      "errors": [
+        {
+          "messageId": "boolean-schema-message",
+          "instanceLocation": "#",
+          "schemaLocations": ["#/allOf/0/type", "#/allOf/1/type"]
         }
       ]
     }

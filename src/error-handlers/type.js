@@ -42,7 +42,7 @@ const typeErrorHandler = async (normalizedErrors, instance, localization) => {
 
     if (allowedTypes.size === 0) {
       errors.push({
-        message: localization.getUnknownErrorMessage("type"),
+        message: localization.getBooleanSchemaErrorMessage(),
         instanceLocation: Instance.uri(instance),
         schemaLocations: failedTypeLocations
       });
