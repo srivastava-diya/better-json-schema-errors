@@ -238,7 +238,6 @@
     },
     {
       "description": "oneOf with $ref alternatives filters by type",
-      "compatibility": "2019",
       "schema": {
         "$defs": {
           "bar": {
